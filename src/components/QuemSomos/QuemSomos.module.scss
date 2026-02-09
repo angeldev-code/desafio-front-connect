@@ -1,0 +1,68 @@
+.containerQuemSomos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 40px 5%;
+  background-color: white;
+
+  .conteudo {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    gap: 50px; // Espaço entre a foto e o texto
+  }
+}
+
+.imagemArea {
+  flex: 1;
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 50px 50px 0; // Opcional: arredondamento suave se desejar
+    object-fit: cover;
+  }
+}
+
+.textoArea {
+  flex: 1;
+  text-align: left;
+
+  h2 {
+    color: #1e4e8c; // Azul escuro padrão do seu projeto
+    font-size: 2rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+  }
+
+  p {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+}
+
+// Responsividade para celulares
+
+@media (max-width: 768px) {
+  .containerQuemSomos {
+    padding: 20px 5%; // Diminui o respiro lateral
+
+    .conteudo {
+      flex-direction: column; // Foto em cima, texto embaixo
+      gap: 30px;
+    }
+  }
+
+  .imagemArea img {
+    border-radius: 20px; // Deixa a foto mais harmônica no cell
+  }
+
+  .textoArea {
+    text-align: center; // Centraliza o texto para leitura no celular
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+}

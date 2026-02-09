@@ -1,18 +1,19 @@
-//importando a imagem da página inicial
-import ImgInicial from "../../assets/img-tela-inicial.png";
-
-//importando a folha de estilo da página inicial
-
+import ImgInicial from "../../assets/imgInicial.png"; // 'i' minúsculo conforme sua pasta
 import styles from "./Inicio.module.scss";
 
 function Inicio() {
   return (
-    <section>
-
-      {/* Estrutura da página inicial  */}
-      
-      <h2> Página Início </h2>
-
+    <section className={styles.containerTelaInicial}>
+      <div>
+        <h1>
+          Projetos Sociais <br /> que transformam
+        </h1>
+        <p>
+          Conectamos sua empresa com projetos sociais impactantes. Juntos,
+          criamos mudanças reais na comunidade.
+        </p>
+      </div>
+      <img src={ImgInicial} alt="Mão simbolizando projetos sociais" />
     </section>
   );
 }

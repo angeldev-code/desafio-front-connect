@@ -1,0 +1,25 @@
+.containerTelaInicial {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 80vh; // Dá altura para a seção aparecer
+  padding: 0 5%;
+
+  div {
+    width: 40%; // Removemos o display flex daqui para não empilhar errado
+    h1 {
+      font-size: 4rem; // Tamanho igual ao modelo
+      color: #1e4e8c;
+      line-height: 1.1;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+  }
+
+  img {
+    width: 45%; // Faz a imagem das mãos aparecer grande na direita
+    height: auto;
+  }
+}

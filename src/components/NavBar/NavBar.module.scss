@@ -27,21 +27,35 @@
 
 //--------------Responsivo------------
 
-@media (min-width: 201px) and (max-width: 500px) {
+@media (max-width: 500px) {
   .navBar {
-    height: 10vh;
-    a {
-      font-size: 0.85rem;
-    }
+    height: auto; // Deixa a altura livre para o conteúdo
+    padding: 15px 10px;
+    flex-wrap: wrap; // Essencial para permitir que os itens pulem linha
+    justify-content: space-between; // Alinha logo na esquerda e foto na direita
 
     .logo {
-      width: 10vw;
-      border: solid red;
+      width: 100px; // Largura fixa evita distorção
+      height: auto;
     }
 
     .imgPerfil {
-      height: 6vh;
-      width: 10vw;
+      height: 50px; // Tamanho fixo em pixels mantém o círculo perfeito
+      width: 50px;
+      order: 2; // Mantém a foto no topo à direita
+    }
+
+    ul {
+      width: 100%; // Faz os links ocuparem uma nova linha inteira
+      order: 3; // Joga os links para baixo da logo e da foto
+      margin-top: 15px;
+      justify-content: space-around; // Distribui os links na nova linha
+      padding: 0;
+    }
+
+    a {
+      font-size: 0.9rem; // Diminui um pouco para caber tudo em uma linha
+      white-space: nowrap; // Impede que o texto quebre em duas linhas
     }
   }
 }

@@ -1,0 +1,112 @@
+.containerPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f0f2f5;
+
+  .cardPerfil {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 85%;
+    max-width: 1000px;
+    gap: 40px;
+  }
+}
+
+.fotoArea img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 6px solid #00c3ff;
+  object-fit: cover;
+}
+
+.infoArea {
+  text-align: left;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 5px;
+  }
+
+  .status {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  // --- NOVA NOMENCLATURA PARA A SEGUNDA FOTO ---
+  .fotoSecundaria {
+    margin-bottom: 15px;
+    img {
+      width: 120px; // Tamanho menor para não poluir o card
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .descricao {
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+
+  .detalhes {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .tags {
+    display: flex;
+    gap: 10px;
+
+    span {
+      background-color: #e1f5fe;
+      color: #0288d1;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .containerPerfil {
+    .cardPerfil {
+      flex-direction: column; // Foto em cima, dados embaixo
+      padding: 30px 20px;
+      text-align: center;
+      width: 95%;
+    }
+  }
+
+  .fotoArea img {
+    width: 200px; // Diminui um pouco a foto no celular
+    height: 200px;
+  }
+
+  .infoArea {
+    text-align: center; // Garante que nome e status fiquem centralizados
+
+    .detalhes {
+      flex-direction: column; // Endereço e e-mail um embaixo do outro
+      gap: 5px;
+    }
+
+    .tags {
+      justify-content: center; // Centraliza as tags azuis
+      flex-wrap: wrap; // Permite que as tags pulem linha se forem muitas
+    }
+  }
+}
